@@ -40,8 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Your custom apps
-    'api',  # Your main app handling the backend
-
+    'api',  # Your main app handling the backends
     # Third-party frameworks
     'rest_framework',  # Django REST Framework for building APIs
     'corsheaders',  # CORS headers to allow React to communicate with Django
