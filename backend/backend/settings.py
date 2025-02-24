@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-pvd(mc@0g*k#p(0qgsqce2@dh_m2-vh@7*gi@k)-(-_r7fa%yu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '638976a3-88be-4220-b936-2ee7abcbfc5a-00-21uu7k3zmx966.janeway.replit.dev',
+]
 
 # Application definition
 

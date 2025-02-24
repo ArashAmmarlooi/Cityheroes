@@ -1,0 +1,96 @@
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./styles/page.module.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Centering the Main Content */
+.page_container__psc4n {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Cards Section (Search + Cards in One) */
+.page_cardsSection__9i2uU {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Search Bar Container */
+.page_searchContainer___ZBUX {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.page_searchContainer___ZBUX .page_searchBar__wSbBu {
+  width: 250px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.page_searchContainer___ZBUX .page_searchButton__eKhHf {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.page_searchContainer___ZBUX .page_searchButton__eKhHf:hover {
+  background-color: #005bb5;
+}
+
+/* Cards Container */
+.page_cardContainer__6fxOR {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Individual Card Styling */
+.page_card__tX_Lh {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+.page_card__tX_Lh h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.page_card__tX_Lh p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+.page_card__tX_Lh button {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.page_card__tX_Lh button:hover {
+  background-color: #005bb5;
+}
+.page_card__tX_Lh:hover {
+  transform: translateY(-5px);
+}

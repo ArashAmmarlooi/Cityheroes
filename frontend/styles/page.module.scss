@@ -1,0 +1,101 @@
+/* Centering the Main Content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Cards Section (Search + Cards in One) */
+.cardsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* Search Bar Container */
+.searchContainer {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  .searchBar {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .searchButton {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+}
+
+/* Cards Container */
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+
+  button {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
