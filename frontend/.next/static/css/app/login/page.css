@@ -1,0 +1,126 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/login/login.module.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/* Container */
+.login_container__Wwxfo {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Left Section */
+.login_leftSection__ivjHp {
+  flex: 1 1;
+  background-color: #0070f3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+.login_leftSection__ivjHp h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.login_leftSection__ivjHp p {
+  font-size: 16px;
+}
+
+/* Right Section */
+.login_rightSection__U_ydu {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+}
+.login_rightSection__U_ydu h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.login_rightSection__U_ydu input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+.login_rightSection__U_ydu .login_loginButton__gjoN_ {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+.login_rightSection__U_ydu .login_loginButton__gjoN_:hover {
+  background-color: #005bb5;
+}
+.login_rightSection__U_ydu .login_googleButton__OqLbR {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+.login_rightSection__U_ydu .login_googleButton__OqLbR:hover {
+  background-color: #f1f1f1;
+}
+.login_rightSection__U_ydu .login_googleButton__OqLbR img {
+  height: 20px;
+}
+.login_rightSection__U_ydu .login_switchText__bNFe_ {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #333;
+}
+.login_rightSection__U_ydu .login_switchText__bNFe_ span {
+  color: #0070f3;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.login_rightSection__U_ydu .login_switchText__bNFe_ span:hover {
+  color: #005bb5;
+}
+
+/* OTP Section */
+.login_otpContainer__yKU8p {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.login_otpInput__LcTzf {
+  width: 41px !important;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.login_otpInput__LcTzf:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
+}

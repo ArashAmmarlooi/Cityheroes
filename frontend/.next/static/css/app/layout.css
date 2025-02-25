@@ -1,0 +1,46 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./components/NavBar.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.NavBar_navbar__RXLGE {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.NavBar_navbar__RXLGE .NavBar_leftSection__VNwXj {
+  display: flex;
+  align-items: center;
+}
+.NavBar_navbar__RXLGE .NavBar_rightSection__s1RVw {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.NavBar_navbar__RXLGE .NavBar_rightSection__s1RVw .NavBar_navLink__HvIb5 {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.NavBar_navbar__RXLGE .NavBar_rightSection__s1RVw .NavBar_navLink__HvIb5:hover {
+  color: #0097FB;
+}
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[13].use[5]!./styles/globals.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+* {
+  background-color: "#fff";
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif; /* Use Roboto font */
+}

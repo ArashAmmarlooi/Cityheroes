@@ -1,0 +1,11 @@
+modules = ["python-3.11", "python-3.10", "python-3.8", "bash", "nodejs-23", "nodejs-22"]
+[nix]
+channel = "stable-24_05"
+
+[[ports]]
+localPort = 3002
+externalPort = 3002
+
+[[ports]]
+localPort = 9000
+externalPort = 80
