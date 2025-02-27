@@ -1,0 +1,134 @@
+      /* Container */
+      .container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      /* Left Section (Blue Background) */
+      .leftSection {
+        flex: 1;
+        background-color: #0070f3;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+
+        h1 {
+          font-size: 28px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+
+      /* Right Section (Register Form) */
+      .rightSection {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        background-color: #ffffff;
+
+        h2 {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+
+        .form {
+          width: 100%;
+          max-width: 320px;
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        input {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 16px;
+        }
+
+        .registerButton {
+          width: 100%;
+          padding: 12px;
+          background-color: #0070f3;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background 0.3s;
+
+          &:hover {
+            background-color: #005bb5;
+          }
+        }
+
+        .error {
+          color: red;
+          font-size: 14px;
+          text-align: center;
+        }
+
+        .link {
+          color: #0070f3;
+          cursor: pointer;
+          font-weight: bold;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        .switchText {
+          font-size: 14px;
+          margin-top: 15px;
+          color: #0070f3;
+          cursor: pointer;
+          font-weight: bold;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #005bb5;
+          }
+        }
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          height: auto;
+        }
+
+        .leftSection {
+          flex: none;
+          padding: 20px;
+        }
+
+        .rightSection {
+          flex: none;
+          padding: 20px;
+        }
+
+        // input {
+        //   font-size: 14px;
+        //   padding: 10px;
+        // }
+
+        .registerButton {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }

@@ -2,6 +2,7 @@
 
 import React from "react";
 import styles from "../styles/page.module.scss";
+import Link from "next/link";
 
 export default function Home(): JSX.Element {
   const [search, setSearch] = React.useState<string>("");
@@ -32,7 +33,9 @@ export default function Home(): JSX.Element {
           <div className={styles.card}>
             <h3>Join as a Helper</h3>
             <p>Offer your skills and assist others in your community.</p>
-            <button>Sign Up</button>
+            <Link href="/login">
+              <button>login</button>
+            </Link>
           </div>
 
           {/* Card 2: You Help */}

@@ -1,0 +1,103 @@
+/* Container */
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Left Section (Blue Background) */
+.leftSection {
+  flex: 1;
+  background-color: #0070f3;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Right Section (Login Form) */
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .loginButton, .otpButton {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+
+  .switchText {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #0070f3;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #005bb5;
+    }
+  }
+
+  .options {
+    margin-top: 15px;
+    text-align: center;
+
+    p {
+      font-size: 14px;
+      color: #333;
+
+      .link {
+        color: #0070f3;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
