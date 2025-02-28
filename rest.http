@@ -1,0 +1,14 @@
+@baseUrl = http://localhost:8000
+@accessToken = 
+
+### Register a new user
+
+POST {{baseUrl}}/register/
+Content-Type: application/json
+
+{
+  "username": "arash112q1",
+  "email": "arashdeveloper@hotmail.com",
+  "password": "arA1231!",
+  "password_confirmation": "arA1231!"
+}

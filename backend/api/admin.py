@@ -12,6 +12,7 @@ class UserAdmin(admin.ModelAdmin):
   list_filter = ('username', )  # Add filter options
 
 
+
 # Register UserProfile model
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):

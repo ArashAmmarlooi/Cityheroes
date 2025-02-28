@@ -5,7 +5,7 @@
   height: 100vh;
 }
 
-/* Left Section (Blue Background) */
+/* Left Section */
 .leftSection {
   flex: 1;
   background-color: #0070f3;
@@ -27,7 +27,7 @@
   }
 }
 
-/* Right Section (Login Form) */
+/* Right Section */
 .rightSection {
   flex: 1;
   display: flex;
@@ -49,6 +49,7 @@
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .loginButton, .otpButton {
@@ -99,5 +100,28 @@
         }
       }
     }
+  }
+}
+
+/* OTP Section */
+.otpContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.otpInput {
+  width: 41px !important;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: #0070f3;
+    box-shadow: 0 0 5px rgba(0, 112, 243, 0.5);
   }
 }

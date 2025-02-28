@@ -1,48 +1,46 @@
+from django.contrib.auth.models import AbstractUser, Group, Permission
 from django.db import models
+import random
+from .managers import UserManager  # Import the custom manager
 
-# Create your models here.
-from django.db import models
+class User(AbstractUser):
+    email = models.EmailField(
+        verbose_name='email address',
+        max_length=255,
+        unique=True,
+        null=False,
+        blank=False,
+    )
+    phone_number = models.CharField(
+        max_length=15,
+        unique=True,
+        null=True,
+        blank=True
+    )
+    verification_code = models.CharField(max_length=6, null=True, blank=True)
+    verification_code_expires_at = models.DateTimeField(null=True, blank=True)
+    otp = models.CharField(max_length=6, null=True, blank=True)
+    otp_expires_at = models.DateTimeField(null=True, blank=True)
+    is_verified = models.BooleanField(default=False)
 
+    USER_TYPES = [
+        ('helper', 'Helper'),
+        ('professional', 'Professional'),
+        ('both', 'Both')
+    ]
+    user_type = models.CharField(max_length=20, choices=USER_TYPES, default='both')
 
-class User(models.Model):
-  id = models.AutoField(primary_key=True)
-  username = models.CharField(max_length=150, unique=True)
-  email = models.EmailField(unique=True)
-  password_hash = models.CharField(max_length=128)
-  # UserProfile will reference this table with a foreign key
+    groups = models.ManyToManyField(Group, related_name="custom_user_groups", blank=True)
+    user_permissions = models.ManyToManyField(Permission, related_name="custom_user_permissions", blank=True)
 
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username', 'phone_number']
 
-class UserProfile(models.Model):
-  user = models.OneToOneField(User,
-                              on_delete=models.CASCADE,
-                              related_name='profile')
-  first_name = models.CharField(max_length=50, blank=True)
-  last_name = models.CharField(max_length=50, blank=True)
-  profile_picture = models.URLField(blank=True, null=True)
-  bio = models.TextField(blank=True)
+    objects = UserManager()  # Use the custom manager
 
-  profession = models.CharField(max_length=100, blank=True)
-  experience = models.TextField(blank=True)
-  skills = models.ManyToManyField('Skill',
-                                  blank=True,
-                                  related_name='users_with_skill')
+    def __str__(self):
+        return self.email
 
-  availability = models.BooleanField(default=True)
-  preferred_contact_method = models.CharField(max_length=50,
-                                              choices=[('email', 'Email'),
-                                                       ('phone', 'Phone'),
-                                                       ('messaging',
-                                                        'Messaging Platform')],
-                                              default='email')
-
-  rating = models.FloatField(blank=True, null=True)
-  help_count = models.PositiveIntegerField(default=0)
-
-  created_at = models.DateTimeField(auto_now_add=True)
-  updated_at = models.DateTimeField(auto_now=True)
-
-
-class Skill(models.Model):
-  id = models.AutoField(primary_key=True)
-  name = models.CharField(max_length=100, unique=True)
-  description = models.TextField(blank=True)
+    def generate_otp(self):
+        self.otp = str(random.randint(100000, 999999))  # 6-digit OTP
+        self.save()
