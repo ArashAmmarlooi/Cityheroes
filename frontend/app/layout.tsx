@@ -1,24 +1,25 @@
 "use client";
 
 import React from "react";
-import NavBar from "../components/NavBar";
+import NavBar from "../component/navbar";
 import "../styles/globals.scss";
-import { wrapper } from "../store";
+import { wrapper } from "../redux/store/store";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useRouter } from "next/navigation"; // ✅ Import useRouter properly
 
 const queryClient = new QueryClient();
 
 function RootLayout({ children }: { children: React.ReactNode }) {
+  const router = useRouter(); // ✅ Ensures router is available
+
   return (
-    <html lang="en">
-      <body>
+    <QueryClientProvider client={queryClient}>
+      <div>
         <NavBar />
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
-      </body>
-    </html>
+        {children}
+      </div>
+    </QueryClientProvider>
   );
 }
 
-export default wrapper.withRedux(RootLayout);
+export default RootLayout;

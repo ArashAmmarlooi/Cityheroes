@@ -1,12 +1,12 @@
 // store.ts
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
-import usersReducer from "./slices/usersSlice";
+import userSlice from "../slices/userSLice";
 
 const makeStore = () =>
   configureStore({
     reducer: {
-      users: usersReducer,
+      users: userSlice,
     },
   });
 

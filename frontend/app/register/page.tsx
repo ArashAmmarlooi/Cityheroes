@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./register.module.scss";
+import Link from "next/link";
 
 export default function Register(): JSX.Element {
   const router = useRouter();
@@ -74,10 +75,10 @@ export default function Register(): JSX.Element {
         </form>
 
         <p>
-          Already have an account?{" "}
-          <span onClick={() => router.push("/login")} className={styles.link}>
-            Login
-          </span>
+          Already have an account?
+          <Link href="login">
+            <span className={styles.link}>Login</span>
+          </Link>
         </p>
       </div>
     </div>

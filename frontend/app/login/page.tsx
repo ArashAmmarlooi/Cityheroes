@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./login.module.scss";
+import Link from "next/link";
 
 export default function Login(): JSX.Element {
   const router = useRouter();
@@ -51,12 +52,9 @@ export default function Login(): JSX.Element {
         <div className={styles.options}>
           <p>
             Don't have an account?{" "}
-            <span
-              onClick={() => router.push("/register")}
-              className={styles.link}
-            >
-              Register
-            </span>
+            <Link href="/register">
+              <span className={styles.link}>Register</span>
+            </Link>
           </p>
           <p
             className={styles.switchText}

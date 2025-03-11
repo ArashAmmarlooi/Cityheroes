@@ -4,8 +4,10 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 interface User {
   id: number;
   username: string;
-  userProfession: string;
-  userAvailability: boolean;
+  location: string;
+  availability: boolean;
+  reviews: number;
+  picture: string;
 }
 
 interface UsersState {
