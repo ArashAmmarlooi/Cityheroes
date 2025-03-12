@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework',
     'rest_framework_simplejwt',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,33 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # ✅ Add this
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_METHODS = [  # ✅ Allow all HTTP methods
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS",
+]
+
+CORS_ALLOW_HEADERS = [  # ✅ Allow essential headers
+    "content-type",
+    "authorization",
+    "X-CSRFToken",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://5c0d2b0f-7d6e-436b-8471-e095068b1168-00-24zh0vpx3z7fb.picard.replit.dev:3000",  # ✅ Fix CSRF issues
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://5c0d2b0f-7d6e-436b-8471-e095068b1168-00-24zh0vpx3z7fb.picard.replit.dev:3000",
 ]
 
 ROOT_URLCONF = 'backend.urls'
